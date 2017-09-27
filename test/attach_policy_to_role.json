@@ -3,42 +3,29 @@
    "region":"us-east-1",
    "detail":{
       "eventVersion":"1.02",
-      "eventID":"c50b043c-191c-4785-92f1-f6116430e4dd",
-      "eventTime":"2017-09-26T20:27:53Z",
+      "eventID":"91d130df-abfa-4c02-b8c6-46d9a45b5d62",
+      "eventTime":"2017-09-27T18:36:53Z",
       "requestParameters":{
-         "policyName":"my-managed-policy",
-         "policyDocument":"{\n \"Version\": \"2012-10-17\",\n \"Statement\": [\n {\n \"Effect\": \"Allow\",\n \"Action\": [\n \"directconnect:Describe*\"\n ],\n \"Resource\": \"*\"\n }\n ]\n}",
-         "description":"Provides read only access to AWS Direct Connect via the AWS Management Console."
+         "roleName":"amejias",
+         "policyArn":"arn:aws:iam::123456789012:policy/my-policy"
       },
       "eventType":"AwsApiCall",
-      "responseElements":{
-         "policy":{
-            "policyName":"my-managed-policy",
-            "createDate":"Sep 26, 2017 8:27:52 PM",
-            "attachmentCount":0,
-            "isAttachable":true,
-            "updateDate":"Sep 26, 2017 8:27:52 PM",
-            "defaultVersionId":"v1",
-            "path":"/",
-            "arn":"arn:aws:iam::123456789012:policy/my-managed-policy",
-            "policyId":"ANANANANANAANANANAANA"
-         }
-      },
+      "responseElements":null,
       "awsRegion":"us-east-1",
-      "eventName":"CreatePolicy",
+      "eventName":"AttachRolePolicy",
       "userIdentity":{
-         "principalId":"AKAKAKAAKAKAAKAKAAKAA:myuser",
-         "accessKeyId":"AKAKAKAAKAKAAKAKAAKA",
+         "principalId":"PRINCIPAL123456742456:myuser",
+         "accessKeyId":"AKAKAKAKAKAKAKAKAKAK",
          "sessionContext":{
             "sessionIssuer":{
                "userName":"consoleAccessAdministrator",
                "type":"Role",
                "arn":"arn:aws:iam::123456789012:role/consoleAccessAdministrator",
-               "principalId":"ARARARARARAR013445543",
+               "principalId":"PRINCIPAL123456742456",
                "accountId":"123456789012"
             },
             "attributes":{
-               "creationDate":"2017-09-26T20:20:10Z",
+               "creationDate":"2017-09-27T18:20:39Z",
                "mfaAuthenticated":"true"
             }
          },
@@ -47,15 +34,15 @@
          "accountId":"123456789012"
       },
       "eventSource":"iam.amazonaws.com",
-      "requestID":"2c2b96e4-a2f9-11e7-8bee-e169fd692c57",
+      "requestID":"d56176f4-a3b2-11e7-8131-8dbb48affbdc",
       "userAgent":"console.amazonaws.com",
       "sourceIPAddress":"1.1.1.1"
    },
    "detail-type":"AWS API Call via CloudTrail",
    "source":"aws.iam",
    "version":"0",
-   "time":"2017-09-26T20:27:53Z",
-   "id":"aa7c864a-f0ee-5560-3220-322980195b35",
+   "time":"2017-09-27T18:36:53Z",
+   "id":"e06d78ad-fe98-1216-374b-23d02c7ec30e",
    "resources":[
 
    ]
