@@ -4,3 +4,13 @@ python:
 install:
 - pip install slacker -t ./dist
 script: ./build.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: MgIXtwgUd1TRPjEzO/F5krovfDmvvRCwrOW0IZgwEGMl9eBZFxr+Upgm7VmGh4GElVT25uhdWKGF1RhZVsRqrLyCteRshLF85jEfv8cuIk2qOXU3NAxj2nHVbetAYVrSIcqTF/y6XZ46O+K7Y/PLD89euj7kQZQFXPyxU7xQPUAo3ZW3+stms2S0WTsIcnJZM38ldK/3+KVLQoMBNo9G0zGO1aSMMG+Yp5F/helIfydjnjBhLX3Ci63wBjWOs6QeTktzY3VUz8pPNNtdQwJbgmKdDgXQ3pEtbj78d6S7aiwh/59AGYoIm8LrzSy+vsETZlRgEL/Ll/6ci9zNOC1Ir9ZRJs4hKmMRKDMm4LJNmjEYlACb6UaYwAkenvEakTZesgrrIU6cqUJwfKkNEUkFQQr06jyEUZ3hxuZ7p7wx29gykSjsYGRrrv1E3ssALN7YiQ/Fsgeb69uvmDXl5/OBoSQHYt2j5zhsJkp9faJFhsuJRgJiWSdGemRD3Lw0vaeVlEi6RvjBvy8DJHxQikTy6EwsGiY2kTepWXQDfp2EJFYX0u1WDzLIJgPqErEz3HhBHecFgbm3W+Wmf1PA7//6i0XJj34W50ota5FRu8XJc8EExkSQ7IvMeBOSTfLT3isyyUKWEZKY2Vdmb2+fgYSFTzc6KhKKXqnhprcZnbFeo7A=
+  file: dist/iam-notify-slack.zip
+  skip_cleanup: true
+  on:
+    tags: true
+    all_branches: true
+    repo: Signiant/aws-iam-slack-notifer
