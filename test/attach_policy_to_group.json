@@ -1,0 +1,49 @@
+{
+   "account":"367384020442",
+   "region":"us-east-1",
+   "detail":{
+      "eventVersion":"1.02",
+      "eventID":"51013048-2b5a-40f3-94e4-b5bfeb9e5d0e",
+      "eventTime":"2017-09-26T21:08:57Z",
+      "requestParameters":{
+         "groupName":"DEV-buildpromotion-dynamodb",
+         "policyArn":"arn:aws:iam::367384020442:policy/djn-test"
+      },
+      "eventType":"AwsApiCall",
+      "responseElements":null,
+      "awsRegion":"us-east-1",
+      "eventName":"AttachGroupPolicy",
+      "userIdentity":{
+         "principalId":"AROAI62LWDYLYW6CG5BR4:dnorth",
+         "accessKeyId":"ASIAJ3UMIFRDYIRHNGSA",
+         "sessionContext":{
+            "sessionIssuer":{
+               "userName":"consoleAccessAdministrator",
+               "type":"Role",
+               "arn":"arn:aws:iam::367384020442:role/consoleAccessAdministrator",
+               "principalId":"AROAI62LWDYLYW6CG5BR4",
+               "accountId":"367384020442"
+            },
+            "attributes":{
+               "creationDate":"2017-09-26T20:20:10Z",
+               "mfaAuthenticated":"true"
+            }
+         },
+         "type":"AssumedRole",
+         "arn":"arn:aws:sts::367384020442:assumed-role/consoleAccessAdministrator/dnorth",
+         "accountId":"367384020442"
+      },
+      "eventSource":"iam.amazonaws.com",
+      "requestID":"e9180de9-a2fe-11e7-8131-8dbb48affbdc",
+      "userAgent":"console.amazonaws.com",
+      "sourceIPAddress":"72.142.116.74"
+   },
+   "detail-type":"AWS API Call via CloudTrail",
+   "source":"aws.iam",
+   "version":"0",
+   "time":"2017-09-26T21:08:57Z",
+   "id":"cdab9602-7533-abd8-5e81-e841357100c0",
+   "resources":[
+
+   ]
+}

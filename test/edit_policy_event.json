@@ -1,0 +1,56 @@
+{
+   "account":"123456789012",
+   "region":"us-east-1",
+   "detail":{
+      "eventVersion":"1.02",
+      "eventID":"b8a8eae4-aada-40f8-a5f6-71c42423f36e",
+      "eventTime":"2017-09-26T20:25:33Z",
+      "requestParameters":{
+         "policyDocument":"{\n \"Version\": \"2012-10-17\",\n \"Statement\": [\n {\n \"Effect\": \"Allow\",\n \"Action\": [\n \"directconnect:Describe*\"\n ],\n \"Resource\": \"*\"\n }\n ]\n}",
+         "setAsDefault":true,
+         "policyArn":"arn:aws:iam::123456789012:policy/Allow_EC2_actions"
+      },
+      "eventType":"AwsApiCall",
+      "responseElements":{
+         "policyVersion":{
+            "createDate":"Sep 26, 2017 8:25:33 PM",
+            "versionId":"v8",
+            "isDefaultVersion":true
+         }
+      },
+      "awsRegion":"us-east-1",
+      "eventName":"CreatePolicyVersion",
+      "userIdentity":{
+         "principalId":"AKAKAKAAKAKAAKAKAAKAA:myuser",
+         "accessKeyId":"AKAKAKAAKAKAAKAKAAKA",
+         "sessionContext":{
+            "sessionIssuer":{
+               "userName":"consoleAccessAdministrator",
+               "type":"Role",
+               "arn":"arn:aws:iam::123456789012:role/consoleAccessAdministrator",
+               "principalId":"ARARARARARAR013445543",
+               "accountId":"123456789012"
+            },
+            "attributes":{
+               "creationDate":"2017-09-26T20:20:10Z",
+               "mfaAuthenticated":"true"
+            }
+         },
+         "type":"AssumedRole",
+         "arn":"arn:aws:sts::123456789012:assumed-role/consoleAccessAdministrator/myuser",
+         "accountId":"123456789012"
+      },
+      "eventSource":"iam.amazonaws.com",
+      "requestID":"d8c7eefc-a2f8-11e7-8131-8dbb48affbdc",
+      "userAgent":"console.amazonaws.com",
+      "sourceIPAddress":"1.1.1.1"
+   },
+   "detail-type":"AWS API Call via CloudTrail",
+   "source":"aws.iam",
+   "version":"0",
+   "time":"2017-09-26T20:25:33Z",
+   "id":"5df7722a-7cea-78f4-4436-304169aa63bb",
+   "resources":[
+
+   ]
+}

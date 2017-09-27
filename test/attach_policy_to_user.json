@@ -1,0 +1,49 @@
+{
+   "account":"123456789012",
+   "region":"us-east-1",
+   "detail":{
+      "eventVersion":"1.02",
+      "eventID":"53f80616-45da-4015-9ef0-0371d8460fd3",
+      "eventTime":"2017-09-26T21:15:33Z",
+      "requestParameters":{
+         "userName":"abelo",
+         "policyArn":"arn:aws:iam::123456789012:policy/my-managed-policy"
+      },
+      "eventType":"AwsApiCall",
+      "responseElements":null,
+      "awsRegion":"us-east-1",
+      "eventName":"AttachUserPolicy",
+      "userIdentity":{
+         "principalId":"AKAKAKAAKAKAAKAKAAKAA:myuser",
+         "accessKeyId":"AKAKAKAAKAKAAKAKAAKA",
+         "sessionContext":{
+            "sessionIssuer":{
+               "userName":"consoleAccessAdministrator",
+               "type":"Role",
+               "arn":"arn:aws:iam::123456789012:role/consoleAccessAdministrator",
+               "principalId":"ARARARARARAR013445543",
+               "accountId":"123456789012"
+            },
+            "attributes":{
+               "creationDate":"2017-09-26T20:20:10Z",
+               "mfaAuthenticated":"true"
+            }
+         },
+         "type":"AssumedRole",
+         "arn":"arn:aws:sts::123456789012:assumed-role/consoleAccessAdministrator/myuser",
+         "accountId":"123456789012"
+      },
+      "eventSource":"iam.amazonaws.com",
+      "requestID":"d55076f6-a2ff-11e7-8de9-fd5bdccc7453",
+      "userAgent":"console.amazonaws.com",
+      "sourceIPAddress":"1.1.1.1"
+   },
+   "detail-type":"AWS API Call via CloudTrail",
+   "source":"aws.iam",
+   "version":"0",
+   "time":"2017-09-26T21:15:33Z",
+   "id":"6397f006-35d2-3b16-5d3e-7711f9edbee3",
+   "resources":[
+
+   ]
+}
