@@ -101,7 +101,7 @@ def lambda_handler(event, context):
             iam_policy_console_link="https://console.aws.amazon.com/iam/home?region=" + region + \
                 "#/policies/" + policy_arn + "$jsonEditor"
 
-            slack_message = "IAM operation detected for policy `" + policy_name + "` by _" + operation_user + "_"
+            slack_message = "IAM policy `" + policy_name + "` has been manipulated by _" + operation_user + "_"
             slack_attachment = [
                     {
             			"fallback": "Check the IAM console for details.",
@@ -110,7 +110,7 @@ def lambda_handler(event, context):
                         "title_link": iam_policy_console_link,
             			"fields": [
                             {
-                                "title": "Action",
+                                "title": "Action Performed",
                                 "value": event_name,
                                 "short": 'false'
                             },
