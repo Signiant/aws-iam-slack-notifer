@@ -6,7 +6,7 @@
       "eventID":"91d130df-abfa-4c02-b8c6-46d9a45b5d62",
       "eventTime":"2017-09-27T18:36:53Z",
       "requestParameters":{
-         "roleName":"amejias",
+         "roleName":"myrole",
          "policyArn":"arn:aws:iam::123456789012:policy/my-policy"
       },
       "eventType":"AwsApiCall",
