@@ -59,25 +59,25 @@ def lambda_handler(event, context):
             post_to_slack = True
             object_field_name = ""
             object_field_value = ""
-            policy_name = event['detail']['requestParameters']['policyArn'].split(':')[4]
+            policy_name = event['detail']['requestParameters']['policyArn'].split(':')[5]
             policy_arn = event['detail']['requestParameters']['policyArn']
         elif event_name == "AttachGroupPolicy" or event_name == "DetachGroupPolicy":
             post_to_slack = True
             object_field_name = "Group"
             object_field_value = event['detail']['requestParameters']['groupName']
-            policy_name = event['detail']['requestParameters']['policyArn'].split(':')[4]
+            policy_name = event['detail']['requestParameters']['policyArn'].split(':')[5]
             policy_arn = event['detail']['requestParameters']['policyArn']
         elif event_name == "AttachUserPolicy" or event_name == "DetachUserPolicy":
             post_to_slack = True
             object_field_name = "User"
             object_field_value = event['detail']['requestParameters']['userName']
-            policy_name = event['detail']['requestParameters']['policyArn'].split(':')[4]
+            policy_name = event['detail']['requestParameters']['policyArn'].split(':')[5]
             policy_arn = event['detail']['requestParameters']['policyArn']
         elif event_name == "AttachRolePolicy" or event_name == "DetachRolePolicy":
             post_to_slack = True
             object_field_name = "Role"
             object_field_value = event['detail']['requestParameters']['roleName']
-            policy_name = event['detail']['requestParameters']['policyArn'].split(':')[4]
+            policy_name = event['detail']['requestParameters']['policyArn'].split(':')[5]
             policy_arn = event['detail']['requestParameters']['policyArn']
         else:
             print "No support for event " + event_name
