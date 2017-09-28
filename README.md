@@ -8,7 +8,7 @@ Notifies a slack channel when an AWS IAM policy is manipulated
 
 # Sample Output
 
-![Sample Slack Posts](https://raw.githubusercontent.com/Signiant/aws-iam-slack-notifier/master/images/slack-sample.jpg)
+![Sample Slack Posts](https://raw.githubusercontent.com/Signiant/aws-iam-slack-notifer/master/images/slack-sample.jpg)
 
 # Installing and Configuring
 
