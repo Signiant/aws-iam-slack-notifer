@@ -2,6 +2,7 @@ import json
 import os
 from slacker import Slacker
 
+
 def send_to_slack(message, attachment, channel, key):
     status = True
     print("sending slack message " + message)
