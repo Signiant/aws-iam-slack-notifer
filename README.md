@@ -25,3 +25,13 @@ Before installing anything to AWS, you will need to configure a "bot" in Slack t
 * Create a new cloudformation stack using the template in the cfn folder
 
 The stack asks for the function zip file location in S3, the slack API Key and the slack channel to post notifications to. Once the stack is created, a cloudwatch event is created to subscribe the lambda function to several IAM events around policy manipulation.
+
+## Filtering Slack Alerts
+
+Using some optional environment variables defined on the Lambda function, you can also exclude certain Slack notifications for specific policy manipultation events.  Set the following variables on the function to `0` if you wish to exclude these events from notifying Slack:
+
+* CREATE_POLICY_NOTIFY
+* CREATE_POLICY_VERSION_NOTIFY
+* ATTACH_GROUP_POLICY_NOTIFY  /  DETACH_GROUP_POLICY_NOTIFY
+* ATTACH_USER_POLICY_NOTIFY  / DETACH_USER_POLICY_NOTIFY
+* ATTACH_ROLE_POLICY_NOTIFY  /  DETACH_ROLE_POLICY_NOTIFY
