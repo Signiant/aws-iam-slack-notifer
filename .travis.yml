@@ -6,8 +6,8 @@ install:
 - pip install flake8
 before_script:
   - flake8 --version
-script:
   - flake8 --ignore=E501 lambda/
+script:
   - ./build.sh
 deploy:
   provider: releases

@@ -2,7 +2,6 @@ import json
 import os
 from slacker import Slacker
 
-
 def send_to_slack(message, attachment, channel, key):
     status = True
     print("sending slack message " + message)
@@ -57,29 +56,25 @@ def lambda_handler(event, context):
             post_to_slack = True
             object_field_name = ""
             object_field_value = ""
-            policy_name = event['detail']['requestParameters']['policyArn'].split(':')[
-                5]
+            policy_name = event['detail']['requestParameters']['policyArn'].split(':')[5]
             policy_arn = event['detail']['requestParameters']['policyArn']
         elif event_name == "AttachGroupPolicy" or event_name == "DetachGroupPolicy":
             post_to_slack = True
             object_field_name = "Group"
             object_field_value = event['detail']['requestParameters']['groupName']
-            policy_name = event['detail']['requestParameters']['policyArn'].split(':')[
-                5]
+            policy_name = event['detail']['requestParameters']['policyArn'].split(':')[5]
             policy_arn = event['detail']['requestParameters']['policyArn']
         elif event_name == "AttachUserPolicy" or event_name == "DetachUserPolicy":
             post_to_slack = True
             object_field_name = "User"
             object_field_value = event['detail']['requestParameters']['userName']
-            policy_name = event['detail']['requestParameters']['policyArn'].split(':')[
-                5]
+            policy_name = event['detail']['requestParameters']['policyArn'].split(':')[5]
             policy_arn = event['detail']['requestParameters']['policyArn']
         elif event_name == "AttachRolePolicy" or event_name == "DetachRolePolicy":
             post_to_slack = True
             object_field_name = "Role"
             object_field_value = event['detail']['requestParameters']['roleName']
-            policy_name = event['detail']['requestParameters']['policyArn'].split(':')[
-                5]
+            policy_name = event['detail']['requestParameters']['policyArn'].split(':')[5]
             policy_arn = event['detail']['requestParameters']['policyArn']
         else:
             print("No support for event " + event_name)
@@ -97,8 +92,7 @@ def lambda_handler(event, context):
                 operation_user = event['detail']['userIdentity']['userName']
             else:
                 # no user so must be a role
-                operation_user = event['detail']['userIdentity']['principalId'].split(':')[
-                    1]
+                operation_user = event['detail']['userIdentity']['principalId'].split(':')[1]
                 operation_role = event['detail']['userIdentity']['sessionContext']['sessionIssuer']['userName']
 
                 operation_user = operation_user + \
@@ -112,21 +106,21 @@ def lambda_handler(event, context):
             slack_attachment = [
                 {
                     "fallback": "Check the IAM console for details.",
-                                "color": "#36a64f",
+                    "color": "#36a64f",
                     "title": "View Policy Details in the AWS Console",
                     "title_link": iam_policy_console_link,
-                                "fields": [
-                                    {
-                                        "title": "Action Performed",
-                                        "value": event_name,
-                                        "short": 'false'
-                                    },
-                                    {
-                                        "title": object_field_name,
-                                        "value": object_field_value,
-                                        "short": 'false'
-                                    }
-                                ]
+                    "fields": [
+                        {
+                            "title": "Action Performed",
+                            "value": event_name,
+                            "short": 'false'
+                        },
+                        {
+                            "title": object_field_name,
+                            "value": object_field_value,
+                            "short": 'false'
+                        }
+                    ]
                 }
             ]
 
