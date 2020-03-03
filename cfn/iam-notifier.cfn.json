@@ -108,7 +108,7 @@
                   "Arn"
                ]
             },
-            "Runtime":"python2.7",
+            "Runtime":"python3.8",
             "Handler":"iam-notify-slack.lambda_handler",
             "MemorySize":128,
             "Timeout":20,
