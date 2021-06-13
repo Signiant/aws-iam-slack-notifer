@@ -38,6 +38,7 @@ Using some optional environment variables defined on the Lambda function, you ca
 
 ## Slacker Updates Needed
 
-In order for this to work with new bot tokens, changes need to be made to Slacker.__init__.py 
+In order for this to work with new bot tokens, changes need to be made to Slacker.__init__.py.
+
 I've added the new __init.py__ file with deprecated parameters removed and support for the Authorization token being sent in the header vs param. 
 (Authorization changes simply include changing line 69 (of the latest version) to change from `kwargs.setdefault('params', {})['token'] = self.token` to `kwargs.setdefault('headers', {})['Authorization'] = "Bearer " + self.token`
