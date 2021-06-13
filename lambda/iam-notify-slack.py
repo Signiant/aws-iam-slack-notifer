@@ -25,9 +25,7 @@ def send_to_slack(message, attachment, channel, key):
         channel=channel,
         text=message,
         attachments=attachment,
-        as_user="false",
-        username="AWS IAM Notifier",
-        icon_emoji=emoji)
+        username="aws-iam-notifier")
 
     return status
 
