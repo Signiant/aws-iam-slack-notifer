@@ -25,9 +25,7 @@ def send_to_slack(message, attachment, channel, key):
         channel=channel,
         text=message,
         attachments=attachment,
-        as_user="false",
-        username="AWS IAM Notifier",
-        icon_emoji=emoji)
+        username="aws-iam-notifier")
 
     return status
 
@@ -42,6 +40,7 @@ def lambda_handler(event, context):
 
     if 'slack_api_token' in os.environ:
         slack_api_token = os.environ['slack_api_token']
+        print (slack_api_token)
     else:
         print("FATAL: No slack api token set in the slack_api_token environment variable")
         status = False
